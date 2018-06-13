@@ -1,0 +1,179 @@
+html{
+	margin:0;
+	background-color: #fff;
+	background-size: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+body{
+	margin:0;
+}
+.background{
+	width: 100vw;
+}
+.zoomout{
+	width: 100vw;
+	float: right;
+}
+#fazeone{
+	position: relative;
+	width: 70vw;
+	margin-top:3%;
+	-webkit-animation:spin 20s linear infinite;
+    -moz-animation:spin 24s linear infinite;
+    animation:spin 24s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.page{
+	width: 100vw;
+	position: relative;
+}
+tr { 
+	vertical-align: top;
+}
+table{
+	border-spacing: 0;
+}
+#your{
+	position: absolute;
+	width: 38vw;
+	display: block;
+	left: 30vw;
+	right: 25vw;
+	top: 12vw;
+}
+#gify{
+	width: 65vw;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5%;
+	-webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
+    animation-delay: 5s;
+	-webkit-transition: width 5s; /* For Safari 3.1 to 6.0 */
+    transition: width 5s;
+}
+#gify:hover{
+	width: 100vw;
+	/*margin-top:5%;*/
+	-webkit-animation: margin-topani 5s; 
+	animation: margin-topani 5s;
+	-webkit-animation-fill-mode: forwards; 
+	 animation-fill-mode: forwards;
+
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes margin-topani {
+    from {margin-top: 5%;}
+    to {margin-top: -3%;}
+}
+
+@keyframes margin-topani {
+    from {margin-top: 5%;}
+    to {margin-top: -3%;}
+}
+.info{
+	width: 100vw;
+	float: right;
+}
+.invite{
+	width: 100vw;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	position: absolute;
+}
+.onit{
+	z-index: -1;
+	-webkit-animation: glow 7s; 
+	animation: glow 7s;
+	-webkit-animation-fill-mode: forwards; 
+	 animation-fill-mode: forwards;
+}
+@-webkit-keyframes glow {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes glow {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-ms-viewport{
+  width: device-width;
+}
+@media screen and (min-width: 100px) and (max-width: 700px) {
+  #fazeone{
+   margin-left:20%;
+   margin-top: 10%;
+   width: 90vw;
+  }
+  .background{
+  	width: 100vw;!important
+  }
+  .invite{
+  	zoom:133%;
+  	margin-left: -17%;
+  	margin-top:-8%;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1050px) {
+  #fazeone{
+  	margin-top: -2%;
+  	margin-left: 10%;
+
+  }
+  .background{
+  	width: 100vw;!important
+  }
+  #your{
+  	top:25vw;
+  	left:35vw;
+  } 
+  #gify{
+  		zoom:133%;
+  }
+  #gify:hover{
+  	-webkit-animation: tupi 5s; 
+	animation: tupi 5s;
+	-webkit-animation-fill-mode: forwards; 
+	 animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes tupi{
+    from {margin-left: 5%;}
+    to {margin-left: -17%;}
+}
+
+@keyframes tupi {
+    from {margin-left: 5%;}
+    to {margin-left: -17%;}
+}
+  .invite{
+  	zoom:133%;
+  	margin-left: -17%;
+  }
+}
+@media screen and (min-height: 500px) and (max-height: 600px) {
+  #fazeone{
+   width: 100vw;
+   margin-left:60%;
+   margin-top: 10%;
+  }
+  .background{
+  	width: 100vw !important;
+  }
+  #your{
+  	top:45vw;
+  	left:25vw;
+  	width: 50vw;
+  }
+  td{
+  	width: 100vw;
+  }
+  .zoomout{
+  	width: 100vw;
+  }
+}

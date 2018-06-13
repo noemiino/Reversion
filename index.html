@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+       <meta charset='utf-8'>
+       <meta http-equiv="X-UA-Compatible" content="chrome=1">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" type="text/css" href="css/stylesheet.css" media="screen" />
+
+
+       <title>Invitation</title>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+       <script src="jquery.mousewheel.js"></script>
+       <script src="jquery.easing.1.3.js"></script>
+       <script>
+          $(function(){
+            $("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
+            $(".page").wrap("<td></td>");
+            $("body").mousewheel(function(event, delta) {
+              this.scrollLeft -= (delta * 30);
+              event.preventDefault();
+            });   
+          });
+       </script> 
+
+  </head>
+
+   <body>
+      <div id="page-wrap">
+
+         <div class="page background">
+            <img id="fazeone" src="img/bounc-01s.png">
+            <a href="#too">
+            <img id="your" src="img/YOUR ACTION-v3s.png"> 
+           <!--  reversion
+
+we are so caught up in our way of living that we don’t realise where
+we’re going wrong. reversion offers a break from this reality and makes
+you take a step back in order to realise how little we think about the
+effect of our actions. 
+
+your brain has been programmed to work towards rewards in order to stay 
+motivated. we share this primitive instinct with animals, but as humans 
+we can think, plan and reflect and therefore carry full responsibilty
+for our actions now and in the future. 
+
+we are able to chose our actions wisely in order to create a positive outcome.
+you can and should be a part of the positive change the world needs to see. -->
+            </a>
+         </div>
+
+         <div class="page zoomout" id="too">
+         
+            <img id="gify" src="asframesmu.gif" type="img/gif"> 
+            <img class="invite" src="img/lasss-01s.png" type="img/png">     
+            <img class="invite onit" src="img/onit3-01s.png" type="img/png">    
+         </div>
+
+      </div>
+      
+      <script type="text/javascript">
+      $(document).ready(function(){
+           $("#gify").click(function(){
+               $("#gify").hide();
+           });
+          $("#gify").click(function(){
+              $(".invite").show();
+          });
+      });
+
+      $(document).ready(function(){
+             animateDiv();   
+         });
+             $(document).ready(function(){
+             animateDiv();   
+         });
+
+         function makeNewPosition(){
+             // Get viewport dimensions (remove the dimension of the div)
+             var h = $(window).height() - 450;
+             var w = $(window).width() - 850;
+             
+             var nh = Math.floor(Math.random() * h);
+             var nw = Math.floor(Math.random() * w);
+             
+             return [nh,nw];        
+         }
+         function animateDiv(){
+             var newq = makeNewPosition();
+             $('#fazeone').animate({ top: newq[0], left: newq[1] }, function(){
+               animateDiv();        
+             });      
+         };
+      </script>
+   </body>
+</html>
